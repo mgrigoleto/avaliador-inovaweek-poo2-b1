@@ -5,7 +5,7 @@
 https://www.youtube.com/watch?v=uMsiw70eK6Q
 
 ## Arquivo editável do diagrama de classes
-O arquivo Avaliador_Inova.pdf contém a impressão do diagrama. 
+O arquivo Avaliador_Inova.pdf contém a impressão do diagrama. <br>
 O acesso à edição do diagrama está nesse [link](https://lucid.app/lucidchart/63547480-5a83-4a08-ae26-8d74c7c11e80/edit?invitationId=inv_c9e530f9-e9c9-4f92-90fd-8f788512d33a).
 <br>
 
