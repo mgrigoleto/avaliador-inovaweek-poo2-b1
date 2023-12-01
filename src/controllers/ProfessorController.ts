@@ -50,10 +50,7 @@ class ProfessorController{
                 })
             }
             else{
-                res.status(200).json({
-                    status:'ok',
-                    profs: profs
-                })
+                res.render('professores', { profs: profs })
             }
         }catch(error){
             res.status(500).json({
@@ -65,7 +62,7 @@ class ProfessorController{
 
     async updateProf(req: Request, res: Response){
         try{
-            const matricula = req.params.matricula;
+            const matricula = parseInt(req.params.matricula);
             const dados: Prisma.ProfessorUpdateInput = req.body;
             const updatedprof = await ProfessorServices.updateProf(matricula, dados);
 
@@ -91,7 +88,7 @@ class ProfessorController{
 
     async deleteProf(req: Request, res: Response){
         try{ 
-            const matricula= req.params.matricula;
+            const matricula= parseInt(req.params.matricula);
             const deletedprof = await ProfessorServices.deleteProf(matricula);
 
             if(matricula == null || deletedprof == null){

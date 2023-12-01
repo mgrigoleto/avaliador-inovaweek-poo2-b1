@@ -50,10 +50,7 @@ class ProjetoController{
                 })
             }
             else{
-                res.status(200).json({
-                    status:'ok',
-                    projs: projs
-                })
+                res.render('projetos', { projs: projs })
             }
         }catch(error){
             res.status(500).json({

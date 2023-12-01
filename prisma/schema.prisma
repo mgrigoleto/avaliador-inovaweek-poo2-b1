@@ -19,24 +19,25 @@ model Projeto{
 
 model Aluno {
   nome String
-  matricula Int @id @unique
-  projeto Projeto @relation(fields: [id_projeto], references: [id])
-  id_projeto String
+  matricula BigInt @id @unique
+  projeto Projeto? @relation(fields: [id_projeto], references: [id])
+  id_projeto String?
   avaliacoes Avaliacao[]
 }
 
-model Avaliacao{
+model Avaliacao {
   id String @id @default(uuid())
   datahora DateTime
   criterio String?
   nota Float
-  avaliadorAluno Aluno?  @relation(fields: [matricula_avaliador], references: [matricula])
-  avaliadorProfessor Professor?  @relation(fields: [matricula_avaliador], references: [matricula])
-  matricula_avaliador Int 
+  avaliadorAluno Aluno? @relation(fields: [matricula_avaliador_aluno], references: [matricula])
+  avaliadorProfessor Professor? @relation(fields: [matricula_avaliador_professor], references: [matricula])
+  matricula_avaliador_aluno BigInt?
+  matricula_avaliador_professor BigInt?
 }
 
 model Professor {
   nome String
-  matricula Int @id @unique
+  matricula BigInt @id @unique
   avaliacoes Avaliacao[]
 }

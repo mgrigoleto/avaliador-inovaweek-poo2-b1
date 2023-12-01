@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Segoe UI;
+        }
+
+        /* TOPO E FIM */
+        .bloco-topo-fim{
+            height: 15vh;
+            max-width: 100vw;
+            background-color: #0e1e89;
+        }
+
+        /* BLOCO PRINCIPAL */
+        .bloco-principal{
+            max-width: 100vw;
+            min-height: calc(70vh - 50px);
+            background-color: lightcyan;
+            text-align: center;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lista-botoes{
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0 0 0;
+        }
+
+        .btn-style-lista{
+            font-family: Segoe UI;
+            background-color: #0e1e89;
+            border: 3px solid #0e1e89;
+            height: 40px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            width: 200px;
+            margin: 15px 0;
+            transition: 0.15s;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-style-lista:hover{
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="bloco-topo-fim">
+
+    </div>
+    <div class="bloco-principal">
+        <h1>Avaliador Inovaweek</h1>
+        <div class="lista-botoes">
+            <button onclick="window.location.href='/list-projetos'" class="btn-style-lista">
+                PROJETOS
+            </button>
+            <button onclick="window.location.href='/list-avaliacoes'" class="btn-style-lista">
+                AVALIAÇÕES
+            </button>
+            <button onclick="window.location.href='/list-alunos'"  class="btn-style-lista">
+                ALUNOS
+            </button>
+            <button onclick="window.location.href='/list-professores'" class="btn-style-lista">
+                PROFESSORES
+            </button>
+        </div>
+
+    </div>
+    <div class="bloco-topo-fim">
+
+    </div>
+</body>
+</html>

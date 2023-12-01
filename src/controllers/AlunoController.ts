@@ -50,10 +50,7 @@ class AlunoController{
                 })
             }
             else{
-                res.status(200).json({
-                    status:'ok',
-                    alunos: alunos
-                })
+                res.render('alunos', { alunos: alunos })
             }
         }catch(error){
             res.status(500).json({
@@ -65,7 +62,7 @@ class AlunoController{
 
     async updateAluno(req: Request, res: Response){
         try{
-            const matricula = req.params.matricula;
+            const matricula = parseInt(req.params.matricula);
             const dados: Prisma.AlunoUpdateInput = req.body;
             const updatedaluno = await AlunoServices.updateAluno(matricula, dados);
 
@@ -91,7 +88,7 @@ class AlunoController{
 
     async deleteAluno(req: Request, res: Response){
         try{ 
-            const matricula= req.params.matricula;
+            const matricula = parseInt(req.params.matricula);
             const deletedaluno = await AlunoServices.deleteAluno(matricula);
 
             if(matricula == null || deletedaluno == null){
