@@ -1,4 +1,4 @@
-# Projeto do primeiro bimestre - Programação Orientada a Objetos 2  
+# Projeto do segundo bimestre - Programação Orientada a Objetos 2  
 *Projeto desenvolvido por Maurígio Grigoleto e Gabriel Mazzega*
 
 ## Arquivo editável do diagrama de classes
