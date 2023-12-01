@@ -50,7 +50,10 @@ class AvaliacaoController{
                 })
             }
             else{
-                res.render('avaliacoes', { avals: avals })
+                res.status(200).json({
+                    status:'ok',
+                    avals: avals
+                })
             }
         }catch(error){
             res.status(500).json({
