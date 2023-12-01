@@ -9,11 +9,12 @@ O acesso à edição do diagrama está nesse [link]([https://lucid.app/lucidspar
 Execute os seguintes comandos, em ordem:
 
 1. npm init -y
-   npm install typescript ts-node @types/node --save-dev
-2. npx tsc --init
-3. npm install prisma --save-dev
-4. npx prisma init --datasource-provider sqlite
-5. npm install express
+2. npm install typescript ts-node @types/node --save-dev
+3. npx tsc --init
+4. npm install prisma --save-dev
+5. npx prisma init --datasource-provider sqlite
+6. npm install express
+7. npm install --save @types/express
 
 ## Instruções para execução
 1. Clonar o repositório git
